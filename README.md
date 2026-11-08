@@ -6,5 +6,5 @@ This project studies the dynamics of a classical rotor subject to periodic kicks
 
 ## Reports
 
-- [Original report in Italian](Report-IT.pdf)
-- [English translation](Report-EN.pdf)
+- [Original report in Italian](Report/Report-IT.pdf)
+- [English translation](Report/Report-EN.pdf)

@@ -27,9 +27,9 @@ def computeLyapunov(initialCondition, dx, N, K):
     # Returns local lyapunov coefficent
     return np.log(d/d0)/(N)
 
-K = 0.9
+K = 0.6
 N = 100
-M = 500
+M = 1000
 
 theta0 = np.linspace(0, 2*np.pi, M)
 p0 = np.linspace(-np.pi, np.pi, M)

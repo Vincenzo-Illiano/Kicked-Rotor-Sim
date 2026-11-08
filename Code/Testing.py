@@ -2,12 +2,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import colormaps
 
-K = 4
+K = 2.3
 N = 1000
-M = 5
+M = 25
 
 center = [np.pi, 0]
-size = np.pi/4
+size = 2*np.pi
 
 theta0 = np.linspace(center[0] - size/2, center[0] + size/2, M)
 p0 = np.linspace(center[1] - size/2, center[1] + size/2, M)
@@ -21,6 +21,8 @@ powerCoeff = np.ones((ny, nx, 1))
 counter = 0
 
 cmap = plt.get_cmap('hsv')
+
+a = 30
 
 for i in range(M):
     for j in range(M):
@@ -36,7 +38,7 @@ for i in range(M):
 
         for k in range(N):
 
-            p = (p + K*np.sin(theta))
+            p = (p + K*np.sin(theta) + (1/(2*a) - np.random.random()/a) )
             theta = (theta + p) % (2*np.pi)
 
             if theta > center[0] + size/2 or theta < center[0] - size/2:
